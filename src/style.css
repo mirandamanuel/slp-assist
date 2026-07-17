@@ -225,8 +225,7 @@ code {
 
 #center {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
   flex-grow: 1;
   min-height: 0;
 
@@ -235,11 +234,13 @@ code {
   }
 }
 
-.stage {
+.image-area {
+  flex: 1;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 16px;
+  justify-content: center;
+  width: 100%;
+  min-height: 0;
 }
 
 #image {
@@ -251,7 +252,9 @@ code {
   gap: 16px;
   position: relative;
   z-index: 1;
+  flex-shrink: 0;
   justify-content: center;
+  padding-bottom: 24px;
 }
 
 #next-steps {

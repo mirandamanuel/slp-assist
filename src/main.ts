@@ -7,23 +7,22 @@ import { resetButton } from './resetter.ts'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 <section id="center">
-  <div class="stage">
+  <div class="image-area">
     <div id="image" class="letter">
       <img src="${letterR}" class="base" width="170" height="179">
     </div>
-    <div class="buttons">
-      <button id="decrementer" type="button" class="decrementer"></button>
-      <button id="resetter" type="button" class="resetter"></button>
-      <button id="incrementer" type="button" class="incrementer"></button>
-    </div>
+  </div>
+  <div class="buttons">
+    <button id="decrementer" type="button" class="decrementer"></button>
+    <button id="resetter" type="button" class="resetter"></button>
+    <button id="incrementer" type="button" class="incrementer"></button>
   </div>
 </section>
 `
 
 const image = document.querySelector<HTMLElement>('#image')!
-const buttons = document.querySelector<HTMLElement>('.buttons')!
 
-initImageScale(image, buttons)
+initImageScale(image)
 decrementButton(document.querySelector<HTMLButtonElement>('#decrementer')!)
 resetButton(document.querySelector<HTMLButtonElement>('#resetter')!)
 incrementButton(document.querySelector<HTMLButtonElement>('#incrementer')!)
