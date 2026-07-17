@@ -4,7 +4,7 @@ import { incrementButton } from './incrementer.ts'
 import { decrementButton } from './decrementer.ts'
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 <section id="center">
-  <div class="letter">
+  <div id="image" class="letter">
     <img src="${letterR}" class="base" width="170" height="179">
   </div>
   <div class="buttons">
@@ -17,6 +17,12 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 <section id="spacer"></section>
 `
 
-decrementButton(document.querySelector<HTMLButtonElement>('#decrementer')!)
-incrementButton(document.querySelector<HTMLButtonElement>('#incrementer')!)
+decrementButton(
+  document.querySelector<HTMLButtonElement>('#decrementer')!,
+  document.querySelector<HTMLElement>('#image')!,
+)
+incrementButton(
+  document.querySelector<HTMLButtonElement>('#incrementer')!,
+  document.querySelector<HTMLElement>('#image')!,
+)
 
