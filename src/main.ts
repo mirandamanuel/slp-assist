@@ -18,9 +18,6 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     </div>
   </div>
 </section>
-
-<div class="ticks"></div>
-<section id="spacer"></section>
 `
 
 const image = document.querySelector<HTMLElement>('#image')!
