@@ -154,6 +154,25 @@ code {
   }
 }
 
+.resetter {
+  font-size: 16px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: var(--accent);
+  background: var(--accent-bg);
+  border: 2px solid transparent;
+  transition: border-color 0.3s;
+  margin-bottom: 24px;
+
+  &:hover {
+    border-color: var(--accent-border);
+  }
+  &:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+}
+
 .hero {
   position: relative;
 
@@ -207,20 +226,33 @@ code {
 
 #center {
   display: flex;
-  flex-direction: column;
-  gap: 25px;
-  place-content: center;
-  place-items: center;
+  align-items: center;
+  justify-content: center;
   flex-grow: 1;
+  min-height: 0;
 
   @media (max-width: 1024px) {
     padding: 32px 20px 24px;
-    gap: 18px;
   }
 }
 
+.stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
 #image {
-  transform-origin: center;
+  transform-origin: center center;
+}
+
+.buttons {
+  display: flex;
+  gap: 16px;
+  position: relative;
+  z-index: 1;
+  justify-content: center;
 }
 
 #next-steps {
