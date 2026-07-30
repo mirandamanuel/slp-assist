@@ -247,6 +247,103 @@ code {
   transform-origin: center center;
 }
 
+.home {
+  width: min(760px, 100%);
+  box-sizing: border-box;
+  margin: auto;
+  padding: 64px 24px;
+}
+
+.eyebrow {
+  margin-bottom: 12px;
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.home h1 {
+  margin: 0;
+  font-size: clamp(40px, 8vw, 72px);
+  line-height: 1;
+}
+
+.intro {
+  margin: 20px 0 40px;
+  color: var(--text);
+}
+
+.letter-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 12px;
+}
+
+.letter-choice {
+  display: grid;
+  aspect-ratio: 1;
+  place-items: center;
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  color: var(--text-h);
+  background: var(--social-bg);
+  font-size: 28px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.2s, border-color 0.2s, color 0.2s, transform 0.2s;
+}
+
+.letter-choice:hover,
+.letter-choice:focus-visible {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-bg);
+  transform: translateY(-3px);
+}
+
+.letter-choice:focus-visible,
+.back-link:focus-visible {
+  outline: 3px solid var(--accent-border);
+  outline-offset: 3px;
+}
+
+.back-link {
+  align-self: flex-start;
+  margin: 24px 24px 0;
+  color: var(--accent);
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.letter-art {
+  display: block;
+  width: min(62vw, 420px);
+  height: auto;
+}
+
+.letter-character {
+  display: block;
+  color: var(--accent);
+  font-family: Georgia, serif;
+  font-size: min(48vw, 360px);
+  font-weight: 700;
+  line-height: 0.9;
+}
+
+.letter-label {
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
 .buttons {
   display: flex;
   gap: 16px;
@@ -255,6 +352,26 @@ code {
   flex-shrink: 0;
   justify-content: center;
   padding-bottom: 24px;
+}
+
+@media (max-width: 560px) {
+  .home {
+    padding: 40px 20px;
+  }
+
+  .letter-grid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+  }
+
+  .letter-choice {
+    border-radius: 8px;
+    font-size: 22px;
+  }
+
+  .back-link {
+    margin-left: 0;
+  }
 }
 
 #next-steps {
